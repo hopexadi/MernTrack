@@ -1,0 +1,276 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* === App Header === */
+.app-header {
+  background-color: #1e293b;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #101820;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  z-index: 100;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* === Logo === */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(96, 165, 250, 0.4);
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+  color: #3b82f6;
+  transform: scale(1.05);
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+/* === Body === */
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* === Layout Containers === */
+.center,
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 80px); 
+  padding: 2rem 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* === Card Layouts === */
+.login-card,
+.signup-card,
+form,
+.home-card {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* === Typography === */
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  color: #facc15;
+}
+
+label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #334155;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  background-color: #475569;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+span,
+p,
+a {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ef4444;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+}
+
+.logout-button:hover {
+  background-color: #dc2626;
+}
+
+/* === Home Page Layout === */
+.user-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* === Expense Overview === */
+.amounts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 1rem 0;
+  background-color: #334155;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.income-amount {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.expense-amount {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* === Expense Form Section === */
+form {
+  margin-top: 1rem;
+  background-color: #1e293b;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+/* === Expense Table === */
+.expense-list {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e293b;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.expense-item:hover {
+  background-color: #334155;
+  transform: scale(1.01);
+}
+
+.expense-description {
+  flex: 1;
+  font-size: 1rem;
+  color: #f1f5f9;
+  font-weight: 500;
+}
+
+.expense-amount {
+  font-weight: bold;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.expense-amount.positive {
+  color: #22c55e;
+}
+
+.expense-amount.negative {
+  color: #ef4444;
+}
+
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+
